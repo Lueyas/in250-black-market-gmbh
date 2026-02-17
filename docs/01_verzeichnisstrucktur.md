@@ -1,20 +1,26 @@
-#Verzeichnisstrucktur
+# Verzeichnisstrucktur
 
-##docs
+## docs
+
 Enthält Dokumentation des Projekts
 
-##sources
+## sources
+
 Enthält Quellcode
 
-##secrets
+## secrets
+
 Enthält geheime Dateien
 
-##archiv
+## archiv
+
 Enthält alte Dateien
 
-##images
+## images
+
 Enthält Bilder
 
-##website
+## website
+
 Webseiten Inhalt
 
