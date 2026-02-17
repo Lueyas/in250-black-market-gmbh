@@ -1,1 +1,5 @@
 secrets/
+*.env
+secret.json
+secret.yml
+KREDITKARTEN.txt
