@@ -1,0 +1,62 @@
+# Name der GitHub Action (wird im Actions-Tab angezeigt)
+name: Mark stale issues and PRs
+
+# Definiert, wann die Action ausgeführt wird
+on:
+  schedule:
+    # Cron-Ausdruck: täglich um 02:00 UTC
+    - cron: "0 12 * * *"
+  # Erlaubt manuelles Starten über den GitHub Actions Tab
+  workflow_dispatch:
+
+# Berechtigungen für das automatisch erzeugte GITHUB_TOKEN
+# Die Action darf Issues und PRs bearbeiten (Labels setzen, kommentieren, schliessen)
+permissions:
+  issues: write
+  pull-requests: write
+
+# Ein Workflow besteht aus Jobs
+jobs:
+  # Name des Jobs (frei wählbar)
+  stale:
+    # Auf welchem virtuellen Runner läuft der Job
+    runs-on: ubuntu-latest
+
+    # Schritte, die ausgeführt werden
+    steps:
+      # Verwendet eine fertige GitHub Action von GitHub
+      # actions/stale kümmert sich komplett um die Logik
+      - uses: actions/stale@v9
+
+        # Konfigurationswerte für die stale-Action
+        with:
+          # GitHub-Token, damit die Action API-Zugriff hat
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Nach wie vielen Tagen Inaktivität wird "stale" gesetzt
+          days-before-stale: 30
+
+          # Nach wie vielen Tagen nach "stale" wird geschlossen
+          days-before-close: 7
+
+          # Label, das gesetzt wird
+          stale-issue-label: stale
+          stale-pr-label: stale
+
+          # Nachricht, wenn ein Issue als stale markiert wird
+          stale-issue-message: >
+            Dieses Issue wurde 30 Tage nicht aktualisiert und ist jetzt als "stale" markiert.
+            Bitte aktualisiere es, sonst wird es in 7 Tagen automatisch geschlossen.
+
+          # Nachricht, wenn ein Issue geschlossen wird
+          close-issue-message: >
+            Dieses Issue wurde 7 Tage nach der "stale"-Markierung nicht aktualisiert und wird daher geschlossen.
+
+          # Nachricht für Pull Requests
+          stale-pr-message: >
+            Dieser Pull Request wurde 30 Tage nicht aktualisiert und ist jetzt als "stale" markiert.
+            Bitte aktualisiere ihn, sonst wird er in 7 Tagen automatisch geschlossen.
+
+          # Nachricht, wenn ein PR geschlossen wird
+          close-pr-message: >
+            Dieser Pull Request wurde 7 Tage nach der "stale"-Markierung nicht aktualisiert und wird daher geschlossen.
