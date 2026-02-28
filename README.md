@@ -9,8 +9,9 @@ Ich bin gespannt wie es wird und ob ich das in der theorie Gelerne in die Praxis
 
 ## Dokumentation
 
+- [Branch_Strategie](docs/02_branch_strategie.md)
 - [Verzeichnisstruktur](docs/01_verzeichnisstrucktur.md)
-- [Original Dokumentation](docs/original.md)
+- [Original_Dokumentation](docs/original.md)
 - [Version_2021](archiv/version6-2021.md)
 - [Version_2020](archiv/version5-2020.md)
 - [Version_2019](archiv/version3-2019.md)
