@@ -16,6 +16,7 @@ Ich bin gespannt wie es wird und ob ich das in der theorie Gelerne in die Praxis
 - [Version_2021](archiv/version6-2021.md)
 - [Version_2020](archiv/version5-2020.md)
 - [Version_2019](archiv/version3-2019.md)
+- [Sicherheitsrichtlinien](SECURITY.md)
 
 ## Status
 - [x] Repository Forken
