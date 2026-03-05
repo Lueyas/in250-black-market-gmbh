@@ -26,7 +26,7 @@ jobs:
     steps:
       # Verwendet eine fertige GitHub Action von GitHub
       # actions/stale kümmert sich komplett um die Logik
-      - uses: actions/stale@v9
+      - uses: actions/stale@v10
 
         # Konfigurationswerte für die stale-Action
         with:
