@@ -4,7 +4,7 @@
 
 Wenn du eine Sicherheitslücke in diesem Projekt entdeckst, melde sie bitte verantwortungsvoll.
 
-Bitte erstelle ein Issue in diesem Repository und beschreibe das Problem möglichst genau. Füge dabei folgende Informationen hinzu:
+Bitte benutze dazu *bug-info@blackmarket.ch* und beschreibe das Problem möglichst genau. Füge dabei folgende Informationen hinzu:
 
 - Beschreibung der Sicherheitslücke
 
@@ -14,4 +14,4 @@ Bitte erstelle ein Issue in diesem Repository und beschreibe das Problem möglic
 
 Wir werden die Meldung prüfen und so schnell wie möglich reagieren.
 
-Vielen Dank für deine Unterstützung bei der Verbesserung der Sicherheit dieses Projekts.
+Vielen Dank für deine Unterstützung bei der Verbesserung der Sicherheit dieses Programms.
